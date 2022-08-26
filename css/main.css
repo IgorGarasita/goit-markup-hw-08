@@ -18,6 +18,9 @@ body {
 
 img {
   display: block;
+  min-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .list {
@@ -56,11 +59,26 @@ a {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -418,14 +436,14 @@ a {
 }
 
 .specificity {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .specificity__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  width: 270px;
 }
 
 .specificity__subtitle {
@@ -437,7 +455,7 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
-  min-width: 270px;
+  text-align: center;
 }
 
 .specificity__subtitle-text {
@@ -445,7 +463,6 @@ a {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  min-width: 270px;
 }
 
 .specificity__icon {
@@ -455,6 +472,20 @@ a {
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+}
+
+.specificity__item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .specificity__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .specificity__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .activity {

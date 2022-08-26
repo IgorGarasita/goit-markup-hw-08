@@ -1,11 +1,11 @@
 .specificity {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .specificity__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  width: 270px;
 }
 .specificity__subtitle {
   margin-top: 30px;
@@ -16,14 +16,13 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
-  min-width: 270px;
+  text-align: center;
 }
 .specificity__subtitle-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  min-width: 270px;
 }
 .specificity__icon {
   display: flex;
@@ -33,3 +32,12 @@
   align-items: center;
   justify-content: center;
 }
+.specificity__item {
+  width: 100%;
+  @include tablet {
+      width: calc((100% - 30px) / 2);
+    }
+    @include desktop {
+      width: calc((100% - 90px) / 4);
+    }
+  }
