@@ -1,6 +1,10 @@
 .team {
     background-color: var(--second-accent-color);
     text-align: center;
+    @include desktop {
+            padding-bottom: 94px;
+            padding-top: 94px;
+        }
 }
 
 .team__list {

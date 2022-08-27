@@ -1,7 +1,11 @@
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     text-align: center;
+    @include desktop {
+            padding-bottom: 94px;
+            padding-top: 94px;
+        }
 }
 
 .clients__title {
@@ -15,13 +19,17 @@
 
 .clients__icon {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 30px;
+    @include desktop {
+        margin-top: 50px;
+        }
 }
 
 .client__link {
     display: flex;
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
@@ -35,4 +43,24 @@
                 fill: var(--accent-color);
                 border: 1px solid var(--accent-color);
 }
+@include tablet {
+    width: 226px;
+}
+
+@include desktop {
+    width: 170px;
+}
+}
+.clients__item {
+    @include mobile {
+            width: calc((100% - 30px) / 2);
+        }
+    
+        @include tablet {
+            width: calc((100% - 60px) / 3);
+        }
+    
+        @include desktop {
+            width: calc((100% - 150px) / 6);
+        }
 }

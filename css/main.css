@@ -11,6 +11,19 @@
   --icon-color: #afb1b8;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 body {
   font-family: Roboto, sans-serif;
   color: #212121;
@@ -440,6 +453,13 @@ a {
   padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .section.specificity {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+}
+
 .specificity__list {
   display: flex;
   flex-wrap: wrap;
@@ -485,6 +505,21 @@ a {
 @media screen and (min-width: 1200px) {
   .specificity__item {
     width: calc((100% - 90px) / 4);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
   }
 }
 
@@ -534,6 +569,12 @@ a {
 .team {
   background-color: var(--second-accent-color);
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .team__list {
@@ -619,9 +660,15 @@ a {
 }
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .clients__title {
@@ -635,13 +682,19 @@ a {
 
 .clients__icon {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .clients__icon {
+    margin-top: 50px;
+  }
 }
 
 .client__link {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
@@ -653,6 +706,32 @@ a {
 .client__link:hover, .client__link:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .client__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__link {
+    width: 170px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .clients__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .projects {
