@@ -52,6 +52,10 @@
 }
 }
 .clients__item {
+    display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
     @include mobile {
             width: calc((100% - 30px) / 2);
         }

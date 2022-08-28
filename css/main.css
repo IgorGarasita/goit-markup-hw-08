@@ -718,6 +718,12 @@ a {
   }
 }
 
+.clients__item {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media screen and (min-width: 480px) {
   .clients__item {
     width: calc((100% - 30px) / 2);
