@@ -4,9 +4,18 @@
 
 .projects-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
-    justify-content: center;
-    margin-bottom: 50px;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+        }
 }
 
 .projects-btn {
@@ -48,7 +57,14 @@
 }
 
 .portfolio-item {
-    width: 370px;
+    width: 100%;
+    @include tablet {
+            width: calc((100% - 30px) / 2);
+        }
+    
+        @include desktop {
+            width: calc((100% - 60px) / 3);
+        }
 }
 
 .portfolio-name {
