@@ -3,13 +3,23 @@
     padding: 60px 0;
     .container {
             display: flex;
+            flex-wrap: wrap;
             align-items: baseline;
             padding: 0;
-        }
+            justify-content: center;
+    }
+}
+.footer__address {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include desktop {
+    text-align: start;
+    }
 }
 .footer__logo {
     display: inline-block;
-        margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .logo {
     font-family: "Raleway", sans-serif;
@@ -54,9 +64,9 @@
 }
 }
 
-.login {
-    margin-left: 70px;
-}
+// .login {
+//     margin-left: 70px;
+// }
 
 .login__title {
     font-weight: 700;

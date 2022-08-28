@@ -870,8 +870,21 @@ a {
 }
 .footer .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   padding: 0;
+  justify-content: center;
+}
+
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__address {
+    text-align: start;
+  }
 }
 
 .footer__logo {
@@ -920,10 +933,6 @@ a {
 }
 .address__contact:hover, .address__contact:focus {
   color: var(--accent-color);
-}
-
-.login {
-  margin-left: 70px;
 }
 
 .login__title {
