@@ -307,6 +307,12 @@ a {
 }
 
 .header-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
   display: flex;
   align-items: center;
 }
@@ -327,14 +333,20 @@ a {
   gap: 50px;
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
 .header__logo {
-  margin-right: 93px;
-  align-items: center;
+  margin-right: 87px;
+  padding: 16px 0;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding: 26px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+    align-items: center;
+  }
 }
 
 .logo {
