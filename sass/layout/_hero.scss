@@ -1,48 +1,68 @@
 .general {
-    background-color: var(--sec-bg-color);
-    text-align: center;
-    padding: 200px 0;
-    background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url(../img/hero-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    max-width: 1600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
+  background-color: var(--sec-bg-color);
+  text-align: center;
+  padding: 118px 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  .container {
+    max-width: 360px;
+    @include desktop {
+      max-width: 696px;
+    }
+  }
+  @include tablet {
+    max-width: 768px;
+  }
 
+  @include desktop {
+    height: 600px;
+    padding: 200px 0;
+    max-width: 1600px;
+  }
+}
 .general__title {
-    margin: 0 auto 30px;
-    max-width: 696px;
-    font-weight: 900;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--second-title-color);
+  @include desktop {
     font-size: 44px;
-    line-height: 1.5;
+    line-height: 1.36;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--second-title-color);
+  }
 }
 
 .general__btn {
-    padding: 10px 32px;
-    border-radius: 4px;
-    min-width: 216px;
-    height: 50px;
-    border: transparent;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    background-color: #2196f3;
-    color: var(--second-title-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-            background-color: var(--btn-hover-color);
-}
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 216px;
+  height: 50px;
+  border: transparent;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  background-color: #2196f3;
+  color: var(--second-title-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover-color);
+  }
 }
