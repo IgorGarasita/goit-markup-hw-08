@@ -101,8 +101,10 @@
   fill: currentColor;
   margin-right: 10px;
 }
+
 .mob-menu-open {
   margin-left: auto;
+  margin-top: 10px;
   border: none;
   background-color: transparent;
   padding: 0;
@@ -112,14 +114,17 @@
   border: none;
   background-color: transparent;
   margin-left: auto;
+  margin-top: 10px;
+  margin-right: 15px;
   padding: 0;
 }
 .mob-menu__icon-open,
 .mob-menu-close {
   fill: #212121;
 }
+
 .mob-menu {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: #fff;
@@ -130,10 +135,12 @@
   > .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: spac e-between;
+    height: 100%;
+    justify-content: space-between;
     overflow: auto;
     align-items: stretch;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .mob-nav__item {
@@ -196,9 +203,12 @@
     padding-left: 10px;
   }
 }
+.mob-menu-bottom .first {
+  padding-left: 0;
+}
 .mob-menu-top {
-  margin-left: 25px;
+  margin-left: 40px;
 }
 .mob-menu-bottom {
-  margin-left: 25px;
+  margin-left: 40px;
 }
