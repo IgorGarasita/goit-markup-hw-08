@@ -65,11 +65,7 @@
     fill: var(--accent-color);
   }
 }
-.modal-form {
-  display: inline-block;
-  margin-top: 12px;
-  width: 100%;
-}
+
 .modal-title {
   text-align: center;
   font-weight: 700;
@@ -77,7 +73,7 @@
   line-height: 1.65;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  //   margin-bottom: 12px;
+  margin-bottom: 12px;
   @include mobile {
     font-size: 20px;
     line-height: 1.5;
@@ -166,11 +162,13 @@
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  &:focus {
-    border-color: var(--accent-color);
-  }
 }
-
+.modal-text:focus {
+  border-color: var(--accent-color);
+}
+.modal-contract {
+  color: var(--accent-color);
+}
 .check-text {
   display: flex;
   align-items: center;
@@ -189,49 +187,31 @@
     font-size: 14px;
     line-height: 1.71;
   }
-  span {
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--title-color);
-    border-radius: 2px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-right: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .modal-check:checked + & {
-    background-color: var(--accent-color);
-    border: none;
-    box-shadow: none;
-  }
-  .modal-check:focus + & {
-    border-color: var(--accent-color);
-  }
 }
-
-.modal-contract {
-  color: var(--accent-color);
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
 .check-icon {
   fill: transparent;
-  .modal-check:checked + .check-text & {
-    fill: var(--second-title-color);
-  }
+}
+.modal-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border: none;
+  box-shadow: none;
+}
+.modal-check:checked + .check-text .check-icon {
+  fill: var(--second-title-color);
+}
+.modal-check:focus + .check-text span {
+  border-color: var(--accent-color);
 }
 
 .button-submit {
@@ -258,4 +238,16 @@
     background-color: var(--btn-hover-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
