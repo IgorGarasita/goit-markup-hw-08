@@ -47,7 +47,7 @@
 }
 
 .general__btn {
-  padding: 10px 32px;
+  padding: 10px 24px;
   border-radius: 4px;
   min-width: 216px;
   height: 50px;
@@ -64,5 +64,8 @@
   &:hover,
   &:focus {
     background-color: var(--btn-hover-color);
+  }
+  @include desktop {
+    padding: 10px 32px;
   }
 }

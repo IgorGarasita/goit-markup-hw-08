@@ -119,21 +119,36 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-  height: 609px;
+  width: 310px;
+  height: 530px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--first-bg-color);
-  padding: 40px;
+  padding: 10px;
 }
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+    padding: 40px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
     height: 581px;
+    padding: 40px;
   }
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .modal-close {
@@ -155,17 +170,35 @@ a {
   fill: var(--accent-color);
 }
 
+.modal-form {
+  display: inline-block;
+  margin-top: 12px;
+  width: 100%;
+}
+
 .modal-title {
   text-align: center;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.65;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  margin-bottom: 12px;
+}
+@media screen and (min-width: 480px) {
+  .modal-title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-title {
+    font-size: 20px;
     line-height: 1.15;
   }
 }
@@ -204,17 +237,34 @@ a {
 }
 
 .modal-fields {
-  margin-top: 20px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 480px) {
+  .modal-fields {
+    margin-top: 20px;
+  }
 }
 
 .modal-label {
   display: block;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
+  font-size: 10px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: var(--text-color);
   margin-bottom: 4px;
+}
+@media screen and (min-width: 480px) {
+  .modal-label {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-label {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
 
 .modal-text {
@@ -241,12 +291,18 @@ a {
   display: flex;
   align-items: center;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 9px;
+  line-height: 1;
   letter-spacing: 0.03em;
   color: var(--text-color);
   cursor: pointer;
   justify-content: center;
+}
+@media screen and (min-width: 480px) {
+  .check-text {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
 @media screen and (min-width: 1200px) {
   .check-text {
@@ -614,7 +670,7 @@ a {
 }
 
 .general__btn {
-  padding: 10px 32px;
+  padding: 10px 24px;
   border-radius: 4px;
   min-width: 216px;
   height: 50px;
@@ -631,6 +687,11 @@ a {
 }
 .general__btn:hover, .general__btn:focus {
   background-color: var(--btn-hover-color);
+}
+@media screen and (min-width: 1200px) {
+  .general__btn {
+    padding: 10px 32px;
+  }
 }
 
 .specificity {
