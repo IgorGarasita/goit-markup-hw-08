@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="header-content container">
         <nav class="navigation">
           <a href="" class="logo header__logo link"
@@ -57,8 +57,65 @@
             >
           </li>
         </ul>
+        <button class="mob-menu-open" type="button">
+          <svg class="mob-menu__icon-open" width="40" height="40">
+            <use href="./img/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <div class="mob-menu-top">
+            <button class="mob-menu-close" type="button">
+              <svg class="mob-menu__icon-close" width="40" height="40">
+                <use href="./img/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="mob-nav">
+              <ul class="mob-nav__list list">
+                <li class="mob-nav__item">
+                  <a
+                    href="./index.html"
+                    class="mob-nav__link link mob-nav__current"
+                    >Студия</a
+                  >
+                </li>
+                <li class="mob-nav__item">
+                  <a href="./portfolio.html" class="mob-nav__link link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mob-nav__item">
+                  <a href="" class="mob-nav__link link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mob-menu-bottom">
+            <ul class="mob-contacts list">
+              <li class="mob-contacts__tel">
+                <a href="tel:+380961111111" class="mob-contacts__link link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contacts__mail">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mob-contacts_link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <div class="mob-soc list">
+              <a href="" class="mob-soc__link link first">Instagram</a>
+              <a href="" class="mob-soc__link link">Twitter</a>
+              <a href="" class="mob-soc__link link">Facebook</a>
+              <a href="" class="mob-soc__link link last">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="projects section">
         <div class="container">
@@ -84,7 +141,24 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-overlate">
-                  <img src="./portfolio/pjct1.jpg" alt="Проект1" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/tehno-desk.jpg    1x,
+                        ./img/tehno-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./img/tehno-tab.jpg 1x, ./img/tehno-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./img/tehno-mb.jpg 1x, ./img/tehno-mb-2x.jpg 2x"
+                      media="(min-width: 767px)"
+                    />
+                    <img src="./img/tehno-desk.jpg" alt="Проект1" width="450" />
+                  </picture>
                   <p class="portfolio-overlate-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -100,7 +174,31 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-overlate">
-                  <img src="./portfolio/pjct2.jpg" alt="Проект2" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/poster-desk.jpg    1x,
+                        ./img/poster-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/poster-tab.jpg    1x,
+                        ./img/poster-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./img/poster-mb.jpg 1x, ./img/poster-mb-2x.jpg 2x"
+                      media="(min-width: 767px)"
+                    />
+                    <img
+                      src="./img/poster-desk.jpg"
+                      alt="Проект2"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio-overlate-text">
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
@@ -118,7 +216,34 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-overlate">
-                  <img src="./portfolio/pjct3.jpg" alt="Проект3" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/restoran-desk.jpg    1x,
+                        ./img/restoran-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/restoran-tab.jpg    1x,
+                        ./img/restoran-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/restoran-mb.jpg    1x,
+                        ./img/restoran-mb-2x.jpg 2x
+                      "
+                      media="(min-width: 767px)"
+                    />
+                    <img
+                      src="./img/restoran-desk.jpg"
+                      alt="Проект3"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio-overlate-text">
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
@@ -134,7 +259,24 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-overlate">
-                  <img src="./portfolio/pjct4.jpg" alt="Проект4" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/prime-desk.jpg    1x,
+                        ./img/prime-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./img/prime-tab.jpg 1x, ./img/prime-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./img/prime-mb.jpg 1x, ./img/prime-mb-2x.jpg 2x"
+                      media="(min-width: 767px)"
+                    />
+                    <img src="./img/prime-desk.jpg" alt="Проект4" width="450" />
+                  </picture>
                   <p class="portfolio-overlate-text">
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
@@ -150,7 +292,24 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-overlate">
-                  <img src="./portfolio/pjct5.jpg" alt="Проект5" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/boxes-desk.jpg    1x,
+                        ./img/boxes-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./img/boxes-tab.jpg 1x, ./img/boxes-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./img/boxes-mb.jpg 1x, ./img/boxes-mb-2x.jpg 2x"
+                      media="(min-width: 767px)"
+                    />
+                    <img src="./img/boxes-desk.jpg" alt="Проект5" width="450" />
+                  </picture>
                   <p class="portfolio-overlate-text">
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
@@ -166,7 +325,21 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-overlate">
-                  <img src="./portfolio/pjct6.jpg" alt="Проект6" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/insp-desk.jpg 1x, ./img/insp-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./img/insp-tab.jpg 1x, ./img/insp-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./img/insp-mb.jpg 1x, ./img/insp-mb-2x.jpg 2x"
+                      media="(min-width: 767px)"
+                    />
+                    <img src="./img/insp-desk.jpg" alt="Проект6" width="450" />
+                  </picture>
                   <p class="portfolio-overlate-text">
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
@@ -182,7 +355,21 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-overlate">
-                  <img src="./portfolio/pjct7.jpg" alt="Проект7" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/lim-desk.jpg 1x, ./img/lim-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./img/lim-tab.jpg 1x, ./img/lim-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./img/lim-mb.jpg 1x, ./img/lim-mb-2x.jpg 2x"
+                      media="(min-width: 767px)"
+                    />
+                    <img src="./img/lim-desk.jpg" alt="Проект7" width="450" />
+                  </picture>
                   <p class="portfolio-overlate-text">
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
@@ -198,7 +385,21 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-overlate">
-                  <img src="./portfolio/pjct8.jpg" alt="Проект8" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/lab-desk.jpg 1x, ./img/lab-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./img/lab-tab.jpg 1x, ./img/lab-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./img/lab-mb.jpg 1x, ./img/lab-mb-2x.jpg 2x"
+                      media="(min-width: 767px)"
+                    />
+                    <img src="./img/lab-desk.jpg" alt="Проект8" width="450" />
+                  </picture>
                   <p class="portfolio-overlate-text">
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
@@ -214,7 +415,21 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-overlate">
-                  <img src="./portfolio/pjct9.jpg" alt="Проект9" width="370" />
+                  <picture>
+                    <source
+                      srcset="./img/busn-desk.jpg 1x, ./img/busn-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./img/busn-tab.jpg 1x, ./img/busn-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./img/busn-mb.jpg 1x, ./img/busn-mb-2x.jpg 2x"
+                      media="(min-width: 767px)"
+                    />
+                    <img src="./img/busn-desk.jpg" alt="Проект9" width="450" />
+                  </picture>
                   <p class="portfolio-overlate-text">
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
                     Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст
@@ -302,5 +517,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
