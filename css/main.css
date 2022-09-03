@@ -102,6 +102,16 @@ button {
   }
 }
 
+.section {
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
+
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -590,6 +600,12 @@ button {
   fill: #212121;
 }
 
+.mob-menu__icon-open:hover, .mob-menu__icon-open:focus,
+.mob-menu-close:hover,
+.mob-menu-close:focus {
+  fill: var(--accent-color);
+}
+
 .mob-menu {
   position: fixed;
   width: 100vw;
@@ -842,6 +858,16 @@ button {
   color: var(--title-color);
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .specificity__subtitle {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .specificity__subtitle {
+    text-align: left;
+  }
+}
 
 .specificity__subtitle-text {
   font-size: 14px;
@@ -865,6 +891,8 @@ button {
 @media screen and (min-width: 768px) {
   .specificity__item {
     width: calc((100% - 30px) / 2);
+    justify-content: flex-start;
+    display: inline;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1151,6 +1179,7 @@ button {
 }
 
 .portfolio-post {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -1208,6 +1237,7 @@ button {
   top: 0;
   left: 0;
   padding: 63px 24px;
+  overflow: scroll;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1221,12 +1251,11 @@ button {
 
 .portfolio-item .portfolio-link:hover .portfolio-overlate-text,
 .portfolio-item .portfolio-link:focus .portfolio-overlate-text {
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 
 .footer {
   background-color: var(--sec-bg-color);
-  padding: 60px 0;
 }
 .footer .container {
   text-align: center;
@@ -1359,6 +1388,7 @@ button {
 @media screen and (min-width: 1200px) {
   .subscribe {
     margin-left: auto;
+    margin-top: 0;
   }
 }
 

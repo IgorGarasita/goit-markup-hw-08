@@ -167,6 +167,13 @@
 .mob-menu-close {
   fill: #212121;
 }
+.mob-menu__icon-open,
+.mob-menu-close {
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
 
 .mob-menu {
   position: fixed;

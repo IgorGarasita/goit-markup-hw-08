@@ -13,3 +13,10 @@
     max-width: 1200px;
   }
 }
+.section {
+  padding: 60px 0;
+  @include desktop {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}

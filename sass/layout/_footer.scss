@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--sec-bg-color);
-  padding: 60px 0;
+  // padding: 60px 0;
   .container {
     text-align: center;
     @include tablet {
@@ -119,6 +119,7 @@
   }
   @include desktop {
     margin-left: auto;
+    margin-top: 0;
   }
 }
 .subscribe__form {

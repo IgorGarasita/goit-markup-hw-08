@@ -24,6 +24,12 @@
   text-transform: uppercase;
   color: var(--title-color);
   text-align: center;
+  @include tablet {
+    text-align: left;
+  }
+  @include desktop {
+    text-align: left;
+  }
 }
 .specificity__subtitle-text {
   font-size: 14px;
@@ -42,9 +48,11 @@
 .specificity__item {
   width: 100%;
   @include tablet {
-      width: calc((100% - 30px) / 2);
-    }
-    @include desktop {
-      width: calc((100% - 90px) / 4);
-    }
+    width: calc((100% - 30px) / 2);
+    justify-content: flex-start;
+    display: inline;
   }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
+}

@@ -49,6 +49,7 @@
 }
 
 .portfolio-post {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -105,7 +106,7 @@
   top: 0;
   left: 0;
   padding: 63px 24px;
-
+  overflow: scroll;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -119,5 +120,5 @@
 
 .portfolio-item .portfolio-link:hover .portfolio-overlate-text,
 .portfolio-item .portfolio-link:focus .portfolio-overlate-text {
-  transform: translateY(0);
+  transform: translateY(0%);
 }
